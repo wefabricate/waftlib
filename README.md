@@ -55,13 +55,19 @@ cp waftlib/templates/13.0/.env-shared .env-secret
 ```
 
 When successful, now we can prepare for building Odoo:
-- Take a look at default odoo config file `vi common/conf.d/odoo.conf`.
+- Take a look at default odoo config file `vi common/conf.d/odoo.conf`. **You need to set "list_db" as True in order to see available databases**
 - Override odoo config variables as you like `vi common/conf.d/override-odoo.conf`. You can use ENVIRONMENT variables here
 - Take a look at defaults shared variables `vi .env-shared` that apply for all clones of this instance, you can replace the link to templet file with a regular file and modify it as you like. NOTE: don't put secret variables values in this file.
 - You can override variables in `.env-shared` by putting it in `.env-secret` such as DBFILTER, PGDATABASE, PGUSER etc
-- Take a look at default [`custom/src/repos.yaml`](https://github.com/Tecnativa/doodba#optodoocustomsrcreposyaml), if you like to modify it replace the link with a regular file.
+- Take a look at default [`custom/src/repos.yaml`](https://github.com/Tecnativa/doodba#optodoocustomsrcreposyaml), if you like to modify it replace the link with a regular file. **For Odoo 13 you should not include repositories that are not from OCA**
 - Take a look at default [`custom/sec/addons.yaml`](https://github.com/Tecnativa/doodba#optodoocustomsrcaddonsyaml), if you like to modify it replace the link with a regular file.
-- Issue build script `./build`
+- Issue build script `./build` **(For this you need an ssh key)**
+
+Before creating a database you need to set "wefabricate" as a superuser in postgres
+
+                su - postgres
+                psql
+                ALTER USER wefabricate with superuser;
 
 Now we can create database and run Odoo:
 
