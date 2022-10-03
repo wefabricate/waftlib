@@ -25,9 +25,10 @@ We needed a tool that could replace buildout, but did not want to switch to a Do
 
 ## What it does not do (or: prerequisites)
 
-- Install postgres
+- Install postgres Link: https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart
 - Install lessc
-- Install wkhtmltopdf
+    sudo apt install node-less
+- Install wkhtmltopdf Link: https://computingforgeeks.com/install-wkhtmltopdf-on-ubuntu-debian-linux/
 - Install system requirements for compiling the necessary Python modules (lxml, yaml etc)
 
 You'll need to take care of these yourself.
