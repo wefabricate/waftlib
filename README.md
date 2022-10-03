@@ -65,10 +65,11 @@ When successful, now we can prepare for building Odoo:
 
 Before creating a database you need to set "wefabricate" as a superuser in postgres
 
-                su - postgres
-                psql
-                ALTER USER wefabricate with superuser;
-
+```
+su - postgres
+psql
+ALTER USER wefabricate with superuser;
+```
 Now we can create database and run Odoo:
 
 ```
