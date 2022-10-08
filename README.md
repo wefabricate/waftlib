@@ -34,7 +34,7 @@ We needed a tool that could replace buildout, but did not want to switch to a Do
 
 You'll need to take care of these yourself.
 
-As for the system requirements, take a look at the files in [this folder](https://github.com/sunflowerit/waftlib/tree/master/templates) or also checkout the [pyenv prerequisites](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+As for the system requirements, take a look at the files in [this folder](https://github.com/sunflowerit/waftlib/tree/master/templates) or also checkout the [pyenv prerequisites](https://github.com/pyenv/pyenv/wiki#suggested-build-environment). In addition to the prerequisites you need libsasl2-dev, libldap2-dev, libpq-dev.
 
 ## Setup a waft project
 
