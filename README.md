@@ -85,8 +85,7 @@ git init
 git add .
 git commit -a "[ADD] Initial project commit"
 git checkout -b build
-git remote add origin git@github.com/mycompany/myproject
-git push --set-upstream origin build
+git push --set-upstream git@github.com:mycompany/myproject build
 ```
 
 Now everyone who wants to work with your project can:
