@@ -51,6 +51,7 @@ Create your secret environment variables file from default environment variables
 
 ```
 cp waftlib/templates/13.0/.env-shared .env-secret
+cp .env-shared .env-secret(for wf-odoo)
 ./bootstrap
 ```
 
